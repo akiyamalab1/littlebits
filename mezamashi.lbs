@@ -1,0 +1,207 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" pathname="onboarding" matrixRows="1" matrixCols="1">
+  <variables>
+    <variable type="" id="ffA3^dmQ8T6Q-1pSuXL0">item</variable>
+    <variable type="" id="X`9,-$dwF!79lbVZpw@R">num_tmp</variable>
+    <variable type="" id="JK=ikVPJa`cddbc2ZLiV">health</variable>
+    <variable type="" id="!u8c!y}#*UUtRFh.X{RW">image</variable>
+    <variable type="" id="z72=e9I1x1jkTG7$C-f:">kotae</variable>
+    <variable type="" id="AO%QdM@9/g[4{Vip8Z_0">score</variable>
+    <variable type="" id="dta!!7p,a]N*j*3V}AFu">score1</variable>
+  </variables>
+  <block type="lb_timing_start" id="2PtO6s8n+3svtT+M05Lo" deletable="false" x="-525" y="-525">
+    <next>
+      <block type="variables_set" id="fOV2AS.xbf9kL~ovFDoh">
+        <field name="VAR" id="AO%QdM@9/g[4{Vip8Z_0" variabletype="">score</field>
+        <value name="VALUE">
+          <block type="lb_math_number" id="=U%##Ie?kZ;iiK~7Ly3P">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id=";:8F]+3P#7n;dRLMN1V-">
+            <field name="VAR" id="dta!!7p,a]N*j*3V}AFu" variabletype="">score1</field>
+            <value name="VALUE">
+              <block type="lb_math_number" id="9}bqrS#begLP][Omqs~B">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="lb_loop_whileuntil" id="WE$mW4|0#Y^h+=)PFU4R">
+                <field name="MODE">UNTIL</field>
+                <value name="BOOL">
+                  <block type="lb_sig_get_bool" id="|mEJmzL3008hg0NX]E.[">
+                    <field name="PIN">IN1</field>
+                    <field name="VALUE">OFF</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="lb_text_settext" id="xWNUru063|0|{@=v.[`Z">
+                    <field name="PIN">OUT1</field>
+                    <value name="TEXT">
+                      <shadow type="lb_text_text" id="3.l9kq~hA6yXOH2YX)wD">
+                        <field name="TEXT">sleep</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="lb_loop_whileuntil" id="sNoO~PPYgj8dhr9FpVzF">
+                    <field name="MODE">UNTIL</field>
+                    <value name="BOOL">
+                      <block type="lb_logic_comparison" id="$$(du2,K?M8neV;}i@7M">
+                        <field name="OP">=</field>
+                        <value name="A">
+                          <block type="lb_math_operators" id=")leTOCbij5R~63dRx-^/">
+                            <field name="OP">PLUS</field>
+                            <value name="A">
+                              <shadow type="lb_math_number" id="Vi!z+qc6DUUZmSc+kDaa">
+                                <field name="NUM">2</field>
+                              </shadow>
+                              <block type="variables_get" id="Zf;:HRWn,faYqwXEaWdH">
+                                <field name="VAR" id="dta!!7p,a]N*j*3V}AFu" variabletype="">score1</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow type="lb_math_number" id="c}?xAC2P(x|jUJH^@~RW">
+                                <field name="NUM">2</field>
+                              </shadow>
+                              <block type="variables_get" id="2Skq-!((+uxuCQUTI~60">
+                                <field name="VAR" id="AO%QdM@9/g[4{Vip8Z_0" variabletype="">score</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="lb_math_number" id="IUEhU{/7hzE!zN+Lje0q">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="lb_logic_if_else" id="m`-wM.6#}CDqLk+)Qw0T">
+                        <value name="IF">
+                          <block type="lb_sig_get_bool" id="e9y6},n+|4f9;4dq6GIR">
+                            <field name="PIN">IN2</field>
+                            <field name="VALUE">ON</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="variables_set" id="!Rx}bM,/g#UbF5fnCA,H">
+                            <field name="VAR" id="AO%QdM@9/g[4{Vip8Z_0" variabletype="">score</field>
+                            <value name="VALUE">
+                              <block type="lb_math_number" id="T-%M.pV!YWGV#[iIsxEg">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="lb_logic_if" id="65mk1}D+I[WQ,eI/h304">
+                            <value name="IF">
+                              <block type="lb_logic_operators" id="2FvQgj#$4$#nUAb|v=H;">
+                                <field name="OP">AND</field>
+                                <value name="A">
+                                  <block type="lb_sig_get_bool" id="vi8?8^;{G_zNgKGlf]{m">
+                                    <field name="PIN">IN3</field>
+                                    <field name="VALUE">ON</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="lb_logic_comparison" id="[MCib0wJPa[Ee$EDwIC%">
+                                    <field name="OP">=</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="a-/#{m-1sD;b,DmjMl3t">
+                                        <field name="VAR" id="AO%QdM@9/g[4{Vip8Z_0" variabletype="">score</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="lb_math_number" id="aXCFhu%=9TX*RPfE?SOZ">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="variables_set" id="$xlB1Yo7Y_q$%s]LEy+1">
+                                <field name="VAR" id="dta!!7p,a]N*j*3V}AFu" variabletype="">score1</field>
+                                <value name="VALUE">
+                                  <block type="lb_math_number" id="8!X4c+ksFzVO-ZW]@kTd">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="lb_sound_set_block" id="J:Y~XQSxM6h^boRS-3~l">
+                            <field name="BITSNAP">OUT2</field>
+                            <value name="FREQ">
+                              <shadow type="lb_sound_notes" id="Ir[$u)__m$tWU=iWyfH@">
+                                <field name="NOTE">A</field>
+                                <field name="OCTAVE">1</field>
+                              </shadow>
+                            </value>
+                            <value name="DUR">
+                              <shadow type="lb_math_number" id="n_/q(D3GAGQ|iAv1^7:]">
+                                <field name="NUM">100</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="lb_sound_set_block" id="?)HneP/@c?Zx,IWa),N#">
+                                <field name="BITSNAP">OUT2</field>
+                                <value name="FREQ">
+                                  <shadow type="lb_sound_notes" id="+/WD6p?%@5]PP^h42~Td">
+                                    <field name="NOTE">F</field>
+                                    <field name="OCTAVE">1</field>
+                                  </shadow>
+                                </value>
+                                <value name="DUR">
+                                  <shadow type="lb_math_number" id="m,s|dX}zt/*42+I_dWFW">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="lb_text_settext" id="uCH}9pHQ]|TyiHyFGXZZ">
+                                    <field name="PIN">OUT1</field>
+                                    <value name="TEXT">
+                                      <shadow type="lb_text_text" id="h$dS3HZFz3T(]CV0XzV?">
+                                        <field name="TEXT">  &lt; &gt;</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="lb_sound_stop" id=".R;yTm]{9i22j)Lt}_aK">
+                        <field name="BITSNAP">OUT2</field>
+                        <next>
+                          <block type="lb_text_settext" id="VrsIt-7_-N$,46N!VS9r">
+                            <field name="PIN">OUT1</field>
+                            <value name="TEXT">
+                              <shadow type="lb_text_text" id="tik=D)UMu#Dkla[t`nfm">
+                                <field name="TEXT">wake up</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
